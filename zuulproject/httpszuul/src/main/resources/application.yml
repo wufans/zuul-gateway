@@ -41,7 +41,7 @@ zuul:
 ################################### erp########################################
     rootpath:
       path: /**
-      url: http://erp.jd.com
+      url: http://www.baidu.com
 #    video:
 #      path: /video/**
 #      url: http://upload.man.jd.com/
@@ -57,8 +57,5 @@ zuul:
 ##       http://so.zhangxingqiu.cn/so/css/frontstyle.css
 
 
-# http://erp.jd.com/static/css/default/portal/layout.css
-# http://erp.jd.com/static/css/default/portal/footer.css
-# http://so.zhangxingqiu.cn/so/byrwiki/css/bootstrap.min.css
 
 
