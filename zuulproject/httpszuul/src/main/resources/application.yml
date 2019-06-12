@@ -1,0 +1,64 @@
+spring:
+  application:
+    name: zuul-gateway
+  main:
+    allow-bean-definition-overriding: true #
+################################### https #####################################
+#server:
+#  port: 8443
+#  ssl:
+#    key-store: classpath:out.keystore
+#    key-store-password: 123123
+##    key-store-type: JKS
+##    key-alias: tomcat?
+#    key-password: 123123
+#######################################################################################
+
+server:
+  port: 80
+https:
+  port: 443
+  baidu:
+    key-store: classpath:out.keystore
+    key-store-password: 123123
+    key-password: 123123
+
+
+eureka:
+  client:
+    service-url:
+      defaultZone: http://localhost:8762/eureka/
+  instance:
+    prefer-ip-address: true
+
+zuul:
+  sensitiveHeaders: Access-Control-Allow-Methods,Access-Control-Allow-Headers,Access-Control-Allow-Origin,Access-Control-Max-Age,P3P
+#   http://localhost/files/**
+  ignoredPatterns: /files/**
+  routes:
+    auth:
+      sensitiveHeaders: Access-Control-Allow-Methods,Access-Control-Allow-Headers,Access-Control-Allow-Origin,Access-Control-Max-Age,P3P
+################################### erp########################################
+    rootpath:
+      path: /**
+      url: http://erp.jd.com
+#    video:
+#      path: /video/**
+#      url: http://upload.man.jd.com/
+############################################################################
+#    https:
+#      path: /**
+#      url: http://www.baidu.com
+
+
+#     byr:
+#       path: /so/**
+#       url : http://so.zhangxingqiu.cn
+##       http://so.zhangxingqiu.cn/so/css/frontstyle.css
+
+
+# http://erp.jd.com/static/css/default/portal/layout.css
+# http://erp.jd.com/static/css/default/portal/footer.css
+# http://so.zhangxingqiu.cn/so/byrwiki/css/bootstrap.min.css
+
+
