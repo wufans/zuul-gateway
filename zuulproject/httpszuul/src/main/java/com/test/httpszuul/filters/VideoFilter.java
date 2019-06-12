@@ -17,8 +17,8 @@ import static org.springframework.cloud.netflix.zuul.filters.support.FilterConst
  */
 @Component
 public class VideoFilter extends ZuulFilter {
-    private final String requestHost = "upload.man.jd";
-    private final String rewriteHost = "http://upload.man.jd.com/";
+    private final String requestHost = "upload.man";
+    private final String rewriteHost = "http://upload.man.test.com/";
 
 
     @Override
